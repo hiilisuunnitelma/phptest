@@ -2,10 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ausceimj/public_html/phptest
-    - export REPOSITORY=https://github.com/hiilisuunnitelma/phptest.git
-    - export BRANCH=main
-    - /bin/cp -rf $DEPLOYPATH/.git $DEPLOYPATH/git
-    - /bin/rm -rf $DEPLOYPATH/*
-    - git clone -b $BRANCH $REPOSITORY $DEPLOYPATH
-    - /bin/cp -rf $DEPLOYPATH/git/.git $DEPLOYPATH
-    - /bin/rm -rf $DEPLOYPATH/git
+    - /bin/cp index.php $DEPLOYPATH
