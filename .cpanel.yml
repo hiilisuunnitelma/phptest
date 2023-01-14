@@ -1,7 +1,5 @@
 ---
 deployment:
-  tasks:
-    - export DEPLOYPATH=/home/ausceimj/public_html/phptest
-    - export REPOSITORY=git@github.com:hiilisuunnitelma/phptest.git
-    - export BRANCH=main
-    - /bin/cp index.php $DEPLOYPATH
+      tasks:
+        - export DEPLOYPATH=/home/ausceimj/public_html/phptest
+        - /bin/cp -r /home/ausceimj/repositories/phptest/* $DEPLOYPATH
