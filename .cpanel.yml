@@ -1,12 +1,11 @@
-##### THIS ALLOWS US TO DEPLOY THE SITE FROM A GIT REPO ######
 ---
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ausceimj/public_html/phptest
-    - /bin/cp -R .vscode $DEPLOYPATH
-    - /bin/cp -R assets $DEPLOYPATH
-    - /bin/cp -R css $DEPLOYPATH
-    - /bin/cp -R fonts $DEPLOYPATH
-    - /bin/cp -R img $DEPLOYPATH
-    - /bin/cp -R js $DEPLOYPATH
-    /bin/cp index.html $DEPLOYPATH
+    - export REPOSITORY=https://github.com/hiilisuunnitelma/phptest.git
+    - export BRANCH=main
+    - /bin/cp -rf $DEPLOYPATH/.git $DEPLOYPATH/git
+    - /bin/rm -rf $DEPLOYPATH/*
+    - git clone -b $BRANCH $REPOSITORY $DEPLOYPATH
+    - /bin/cp -rf $DEPLOYPATH/git/.git $DEPLOYPATH
+    - /bin/rm -rf $DEPLOYPATH/git
