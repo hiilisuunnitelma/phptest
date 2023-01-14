@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/ausceimj/public_html/phptest/
-    - /bin/cp index.php $DEPLOYPATH
+    - export DEPLOYPATH=/home/ausceimj/public_html/
+    - /bin/cp test1.php $DEPLOYPATH
